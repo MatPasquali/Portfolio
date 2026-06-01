@@ -111,7 +111,7 @@ const I18N = {
 
     "contact.title": "Let's talk",
     "contact.lead": "Open to opportunities, collaborations and data conversations. Reach out:",
-    "contact.cv": "Download résumé (PDF)"
+    "contact.cv": "Download CV (PDF)"
   }
 };
 
