@@ -17,6 +17,7 @@ const I18N = {
     "hero.cmd": "./carreira.sh --resumo",
     "hero.subtitle": "Transformo dados em decisão — de pipelines de ETL a modelos preditivos.",
     "hero.ctaProjects": "Ver projetos",
+    "hero.ctaCV": "↓ Baixar CV",
     "hero.ctaContact": "Entrar em contato",
     "hero.statYears": "anos em pricing & seguros",
     "hero.statDegrees": "formações acadêmicas",
@@ -54,7 +55,8 @@ const I18N = {
     "education.bscDesc": "Fundamentos de algoritmos, engenharia de software e teoria da computação.",
 
     "contact.title": "Vamos conversar",
-    "contact.lead": "Aberto a oportunidades, colaborações e trocas sobre dados. Me chame:"
+    "contact.lead": "Aberto a oportunidades, colaborações e trocas sobre dados. Me chame:",
+    "contact.cv": "Baixar currículo (PDF)"
   },
 
   en: {
@@ -70,6 +72,7 @@ const I18N = {
     "hero.cmd": "./career.sh --summary",
     "hero.subtitle": "I turn data into decisions — from ETL pipelines to predictive models.",
     "hero.ctaProjects": "View projects",
+    "hero.ctaCV": "↓ Download CV",
     "hero.ctaContact": "Get in touch",
     "hero.statYears": "years in pricing & insurance",
     "hero.statDegrees": "academic degrees",
@@ -107,7 +110,8 @@ const I18N = {
     "education.bscDesc": "Foundations of algorithms, software engineering and theory of computation.",
 
     "contact.title": "Let's talk",
-    "contact.lead": "Open to opportunities, collaborations and data conversations. Reach out:"
+    "contact.lead": "Open to opportunities, collaborations and data conversations. Reach out:",
+    "contact.cv": "Download résumé (PDF)"
   }
 };
 
