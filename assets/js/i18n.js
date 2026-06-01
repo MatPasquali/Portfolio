@@ -24,9 +24,9 @@ const I18N = {
     "hero.statRepos": "repositórios públicos",
 
     "about.title": "Sobre mim",
-    "about.p1": "Sou Bacharel em Ciência da Computação, pós-graduado (MBA) em Data Science & Analytics pela USP/ESALQ e atualmente curso o Mestrado em Computação Aplicada no Mackenzie.",
-    "about.p2": "Há mais de 4 anos atuo com Data Science & Analytics na área de seguros — pricing, gestão de portfólio e risco de crédito — construindo processos de ETL, automações e dashboards que geram eficiência operacional.",
-    "about.p3": "Gosto de problemas de ponta a ponta: extrair dados de fontes públicas (IBGE, CNEFE), modelar, validar e entregar a informação onde ela vira decisão.",
+    "about.p1": "Sou cientista de dados apaixonado por engenharia e modelagem de dados, com mais de quatro anos transformando bases complexas em decisões de negócio na indústria de seguros. Construí uma base sólida: Bacharelado em Ciência da Computação, MBA em Data Science & Analytics pela USP/ESALQ e, atualmente, Mestrado em Computação Aplicada no Mackenzie.",
+    "about.p2": "Na Zurich, atuo como Analista de Pricing desenhando pipelines de ETL, automações e dashboards que eliminam tarefas manuais e geram inteligência operacional. Liderei a migração de rotinas analíticas do SAS para o Databricks, automatizei a extração dos dados do Censo do IBGE pela API SIDRA e entreguei relatórios executivos em Power BI protegidos com segurança em nível de linha (RLS).",
+    "about.p3": "Domino Python, SQL, SAS, Databricks e Power BI e me movo bem em problemas de ponta a ponta: extrair dados de fontes públicas como IBGE e CNEFE, modelar, validar e entregar a informação exatamente onde ela vira decisão. Comunico-me em português, inglês avançado (Cambridge FCE) e espanhol.",
     "about.focus": "Data Science · ETL · ML",
     "about.statusVal": "aberto a colaborações",
 
@@ -79,9 +79,9 @@ const I18N = {
     "hero.statRepos": "public repositories",
 
     "about.title": "About me",
-    "about.p1": "I hold a B.Sc. in Computer Science, an MBA in Data Science & Analytics from USP/ESALQ, and I'm currently pursuing a Master's in Applied Computing at Mackenzie.",
-    "about.p2": "For 4+ years I've worked in Data Science & Analytics within insurance — pricing, portfolio management and credit risk — building ETL processes, automations and dashboards that drive operational efficiency.",
-    "about.p3": "I enjoy end-to-end problems: extracting data from public sources (IBGE, CNEFE), modeling, validating and delivering information where it becomes a decision.",
+    "about.p1": "I'm a data scientist driven by data engineering and modeling, with over four years turning complex datasets into business decisions across the insurance industry. I built a solid foundation: a B.Sc. in Computer Science, an MBA in Data Science & Analytics from USP/ESALQ and, currently, a Master's in Applied Computing at Mackenzie.",
+    "about.p2": "At Zurich, I work as a Pricing Analyst designing ETL pipelines, automations and dashboards that remove manual work and create operational intelligence. I led the migration of analytical routines from SAS to Databricks, automated IBGE Census data extraction through the SIDRA API and delivered executive Power BI reports secured with Row-Level Security (RLS).",
+    "about.p3": "I'm fluent in Python, SQL, SAS, Databricks and Power BI, and thrive on end-to-end problems: extracting data from public sources such as IBGE and CNEFE, modeling, validating and delivering information exactly where it becomes a decision. I communicate in Portuguese, advanced English (Cambridge FCE) and Spanish.",
     "about.focus": "Data Science · ETL · ML",
     "about.statusVal": "open to collaborations",
 
