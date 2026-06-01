@@ -26,7 +26,7 @@ const I18N = {
     "about.title": "Sobre mim",
     "about.p1": "Sou cientista de dados apaixonado por engenharia e modelagem de dados, com mais de quatro anos transformando bases complexas em decisões de negócio na indústria de seguros. Construí uma base sólida: Bacharelado em Ciência da Computação, MBA em Data Science & Analytics pela USP/ESALQ e, atualmente, Mestrado em Computação Aplicada no Mackenzie.",
     "about.p2": "Na Zurich, atuo como Analista de Pricing desenhando pipelines de ETL, automações e dashboards que eliminam tarefas manuais e geram inteligência operacional. Liderei a migração de rotinas analíticas do SAS para o Databricks, automatizei a extração dos dados do Censo do IBGE pela API SIDRA e entreguei relatórios executivos em Power BI protegidos com segurança em nível de linha (RLS).",
-    "about.p3": "Domino Python, SQL, SAS, Databricks (Spark) e Power BI e me movo bem em problemas de ponta a ponta: extrair dados de fontes públicas como IBGE e CNEFE, modelar, validar e entregar a informação exatamente onde ela vira decisão. Comunico-me em português, inglês avançado (Cambridge FCE) e espanhol.",
+    "about.p3": "Domino Python, SQL, SAS, Databricks (Spark) e Power BI e lido bem com problemas de ponta a ponta: extrair dados de fontes públicas como IBGE e CNEFE, modelar, validar e entregar a informação exatamente onde ela vira decisão. Comunico-me em português, inglês avançado (Cambridge FCE) e espanhol.",
     "about.focus": "Data Science · ETL · ML",
     "about.statusVal": "aberto a colaborações",
 
