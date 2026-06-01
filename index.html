@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Mateus de Pasquali da Silva" />
+  <meta name="description" data-i18n="meta.description"
+        content="Portfólio de Mateus de Pasquali — Cientista de Dados e Mestrando em Computação Aplicada. ETL, pricing, machine learning e engenharia de dados." />
+  <meta name="theme-color" content="#0a0e14" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mateus de Pasquali · Data Science & Computação" />
+  <meta property="og:description" content="Cientista de Dados na Zurich · Mestrando em Computação Aplicada (Mackenzie)" />
+  <meta property="og:type" content="website" />
+
+  <title>Mateus de Pasquali · Data Science</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- Animated canvas background -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Navbar -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__logo">
+      <span class="nav__prompt">~/</span>mateus<span class="nav__cursor">_</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#about"    data-i18n="nav.about">Sobre</a>
+      <a href="#skills"   data-i18n="nav.skills">Skills</a>
+      <a href="#projects" data-i18n="nav.projects">Projetos</a>
+      <a href="#education"data-i18n="nav.education">Formação</a>
+      <a href="#contact"  data-i18n="nav.contact">Contato</a>
+    </nav>
+    <div class="nav__actions">
+      <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">
+        <span class="lang-toggle__pt is-active">PT</span>
+        <span class="lang-toggle__sep">/</span>
+        <span class="lang-toggle__en">EN</span>
+      </button>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="hero__inner">
+        <div class="terminal" role="img" aria-label="Terminal window">
+          <div class="terminal__bar">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+            <span class="terminal__title">mateus@portfolio: ~</span>
+          </div>
+          <div class="terminal__body">
+            <p class="terminal__line"><span class="prompt">$</span> whoami</p>
+            <p class="terminal__out" id="typed-name"></p>
+            <p class="terminal__line"><span class="prompt">$</span> cat role.txt</p>
+            <p class="terminal__out terminal__out--accent" data-i18n="hero.role">
+              Cientista de Dados &amp; Mestrando em Computação Aplicada
+            </p>
+            <p class="terminal__line"><span class="prompt">$</span> <span data-i18n="hero.cmd">./carreira.sh --resumo</span><span class="blink">▋</span></p>
+          </div>
+        </div>
+
+        <h1 class="hero__title">Mateus de Pasquali</h1>
+        <p class="hero__subtitle" data-i18n="hero.subtitle">
+          Transformo dados em decisão — de pipelines de ETL a modelos preditivos.
+        </p>
+
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--primary" data-i18n="hero.ctaProjects">Ver projetos</a>
+          <a href="#contact"  class="btn btn--ghost"   data-i18n="hero.ctaContact">Entrar em contato</a>
+        </div>
+
+        <div class="hero__stats">
+          <div class="stat"><span class="stat__num" data-count="4">0</span><span class="stat__label" data-i18n="hero.statYears">anos em pricing &amp; seguros</span></div>
+          <div class="stat"><span class="stat__num" data-count="3">0</span><span class="stat__label" data-i18n="hero.statDegrees">formações acadêmicas</span></div>
+          <div class="stat"><span class="stat__num" data-count="10">0</span><span class="stat__label" data-i18n="hero.statRepos">repositórios públicos</span></div>
+        </div>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll down">▼</a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="section__head">
+        <span class="section__index">01</span>
+        <h2 class="section__title"><span class="section__hash">#</span> <span data-i18n="about.title">Sobre mim</span></h2>
+      </div>
+      <div class="about">
+        <div class="about__text">
+          <p data-i18n="about.p1">
+            Sou Bacharel em Ciência da Computação, pós-graduado (MBA) em Data Science &amp; Analytics
+            pela USP/ESALQ e atualmente curso o Mestrado em Computação Aplicada no Mackenzie.
+          </p>
+          <p data-i18n="about.p2">
+            Há mais de 4 anos atuo com Data Science &amp; Analytics na área de seguros — pricing,
+            gestão de portfólio e risco de crédito — construindo processos de ETL, automações e
+            dashboards que geram eficiência operacional.
+          </p>
+          <p data-i18n="about.p3">
+            Gosto de problemas de ponta a ponta: extrair dados de fontes públicas (IBGE, CNEFE),
+            modelar, validar e entregar a informação onde ela vira decisão.
+          </p>
+        </div>
+        <aside class="about__card">
+          <div class="about__card-row"><span class="key">location</span><span class="val">São Paulo, BR</span></div>
+          <div class="about__card-row"><span class="key">company</span><span class="val">Zurich Insurance</span></div>
+          <div class="about__card-row"><span class="key">focus</span><span class="val" data-i18n="about.focus">Data Science · ETL · ML</span></div>
+          <div class="about__card-row"><span class="key">status</span><span class="val status-open" data-i18n="about.statusVal">aberto a colaborações</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="section__head">
+        <span class="section__index">02</span>
+        <h2 class="section__title"><span class="section__hash">#</span> <span data-i18n="skills.title">Stack &amp; Skills</span></h2>
+      </div>
+      <div class="skills">
+        <div class="skill-group">
+          <h3 class="skill-group__name" data-i18n="skills.lang">Linguagens &amp; Dados</h3>
+          <ul class="tags">
+            <li class="tag">Python</li><li class="tag">SQL</li><li class="tag">SAS</li>
+            <li class="tag">R</li><li class="tag">Pandas</li><li class="tag">NumPy</li>
+            <li class="tag">Scikit-learn</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group__name" data-i18n="skills.platforms">Plataformas &amp; BI</h3>
+          <ul class="tags">
+            <li class="tag">Databricks</li><li class="tag">Power BI</li><li class="tag">Spark</li>
+            <li class="tag">Azure</li><li class="tag">Git</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group__name" data-i18n="skills.domains">Domínios</h3>
+          <ul class="tags">
+            <li class="tag" data-i18n="skills.etl">ETL &amp; Eng. de Dados</li>
+            <li class="tag" data-i18n="skills.pricing">Pricing</li>
+            <li class="tag" data-i18n="skills.portfolio">Gestão de Portfólio</li>
+            <li class="tag" data-i18n="skills.credit">Risco de Crédito</li>
+            <li class="tag">Machine Learning</li>
+            <li class="tag" data-i18n="skills.geo">Geoprocessamento</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="section__head">
+        <span class="section__index">03</span>
+        <h2 class="section__title"><span class="section__hash">#</span> <span data-i18n="projects.title">Projetos em destaque</span></h2>
+      </div>
+      <div class="projects" id="projects-grid"><!-- injected by JS --></div>
+      <div class="projects__more">
+        <a href="https://github.com/MatPasquali?tab=repositories" target="_blank" rel="noopener" class="btn btn--ghost" data-i18n="projects.all">Ver todos no GitHub →</a>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <div class="section__head">
+        <span class="section__index">04</span>
+        <h2 class="section__title"><span class="section__hash">#</span> <span data-i18n="education.title">Formação acadêmica</span></h2>
+      </div>
+      <ol class="timeline">
+        <li class="timeline__item">
+          <span class="timeline__dot"></span>
+          <span class="timeline__period">2026 — <span data-i18n="education.now">agora</span></span>
+          <h3 class="timeline__role" data-i18n="education.msc">Mestrado em Computação Aplicada</h3>
+          <p class="timeline__org">Universidade Presbiteriana Mackenzie</p>
+          <p class="timeline__desc" data-i18n="education.mscDesc">Algoritmos, estruturas de dados avançadas e computação aplicada a problemas reais.</p>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__dot"></span>
+          <span class="timeline__period" data-i18n="education.done">concluído</span>
+          <h3 class="timeline__role" data-i18n="education.mba">MBA em Data Science &amp; Analytics</h3>
+          <p class="timeline__org">USP / ESALQ</p>
+          <p class="timeline__desc" data-i18n="education.mbaDesc">Estatística, machine learning e analytics aplicados a negócios. TCC sobre projeções para o Brasil em 2050.</p>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__dot"></span>
+          <span class="timeline__period" data-i18n="education.done">concluído</span>
+          <h3 class="timeline__role" data-i18n="education.bsc">Bacharelado em Ciência da Computação</h3>
+          <p class="timeline__org" data-i18n="education.bscOrg">Graduação</p>
+          <p class="timeline__desc" data-i18n="education.bscDesc">Fundamentos de algoritmos, engenharia de software e teoria da computação.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section--contact">
+      <div class="section__head">
+        <span class="section__index">05</span>
+        <h2 class="section__title"><span class="section__hash">#</span> <span data-i18n="contact.title">Vamos conversar</span></h2>
+      </div>
+      <p class="contact__lead" data-i18n="contact.lead">
+        Aberto a oportunidades, colaborações e trocas sobre dados. Me chame:
+      </p>
+      <div class="contact__links">
+        <a href="mailto:matpasqsi@gmail.com" class="contact__link">
+          <span class="contact__icon">✉</span> matpasqsi@gmail.com
+        </a>
+        <a href="https://github.com/MatPasquali" target="_blank" rel="noopener" class="contact__link">
+          <span class="contact__icon">⌥</span> github.com/MatPasquali
+        </a>
+        <a href="https://www.linkedin.com/in/mateuspasquali/" target="_blank" rel="noopener" class="contact__link">
+          <span class="contact__icon">in</span> linkedin.com/in/mateuspasquali
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      <span class="prompt">$</span> echo
+      "© <span id="year"></span> Mateus de Pasquali"
+    </p>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
