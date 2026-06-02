@@ -1,6 +1,15 @@
 # Portfólio · Mateus de Pasquali
 
+<p>
+  <a href="https://matpasquali.github.io/Portfolio/"><img src="https://img.shields.io/badge/Live%20Site-Online-36e2c4?style=for-the-badge&logo=githubpages&logoColor=white" alt="Live Site" /></a>
+  <img src="https://img.shields.io/badge/Stack-HTML%20%2B%20CSS%20%2B%20JS-1f6feb?style=for-the-badge" alt="Stack" />
+  <img src="https://img.shields.io/badge/i18n-PT%20%2F%20EN-a78bfa?style=for-the-badge" alt="Bilingual" />
+  <img src="https://img.shields.io/badge/Theme-Dark%20Terminal-0a0e14?style=for-the-badge" alt="Theme" />
+</p>
+
 Site de portfólio estático (HTML + CSS + JS puro), bilíngue (PT/EN), com estética *dark tech / terminal*.
+
+🔗 **Acesse ao vivo | Live site:** [matpasquali.github.io/Portfolio](https://matpasquali.github.io/Portfolio/)
 
 ## ✨ Recursos
 
