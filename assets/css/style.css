@@ -197,7 +197,7 @@ body::before {
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.hero__subtitle { color: var(--text-dim); font-size: clamp(1rem,2.5vw,1.2rem); margin: 16px auto 0; max-width: 540px; text-wrap: balance; }
+.hero__subtitle { color: var(--text-dim); font-size: clamp(1rem,2.5vw,1.2rem); margin: 16px auto 0; max-width: 540px; text-align: justify; text-justify: inter-word; }
 
 .hero__cta { display: flex; gap: 14px; justify-content: center; margin-top: 34px; flex-wrap: wrap; }
 
@@ -309,6 +309,9 @@ body::before {
 .timeline__role { font-size: var(--fs-lg); font-weight: 700; margin: 4px 0; }
 .timeline__org { color: var(--text-dim); font-size: var(--fs-md); font-weight: 600; }
 .timeline__desc { color: var(--text-dim); font-size: var(--fs-md); margin-top: 6px; max-width: 620px; }
+.timeline__list { list-style: none; margin-top: 12px; display: flex; flex-direction: column; gap: 9px; max-width: 640px; }
+.timeline__list li { position: relative; padding-left: 22px; color: var(--text-dim); font-size: var(--fs-md); text-align: justify; text-justify: inter-word; }
+.timeline__list li::before { content: "▹"; position: absolute; left: 0; top: -1px; color: var(--accent); }
 
 /* Contact */
 .section--contact { text-align: center; padding-bottom: 60px; }
