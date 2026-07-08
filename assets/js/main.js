@@ -24,6 +24,8 @@
     // toggle button state
     document.querySelector(".lang-toggle__pt").classList.toggle("is-active", next === "pt");
     document.querySelector(".lang-toggle__en").classList.toggle("is-active", next === "en");
+    const btn = document.getElementById("lang-toggle");
+    if (btn) btn.setAttribute("aria-label", next === "pt" ? "Mudar idioma para inglês" : "Switch language to Portuguese");
 
     renderProjects(next);
     typeName(); // re-run typewriter so the greeting matches language

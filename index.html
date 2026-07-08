@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Mateus de Pasquali da Silva" />
   <meta name="description" data-i18n="meta.description"
-        content="Portfólio de Mateus de Pasquali — Cientista de Dados e Mestrando em Computação Aplicada. ETL, pricing, machine learning e engenharia de dados." />
+        content="Portfólio de Mateus de Pasquali · Cientista de Dados e Mestrando em Computação Aplicada. ETL, pricing, machine learning e engenharia de dados." />
   <meta name="theme-color" content="#0a0e14" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 
@@ -22,8 +22,11 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Mark JS as available before first paint (reveal animations are JS-gated) -->
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
+  <a href="#main" class="skip-link" data-i18n="a11y.skip">Pular para o conteúdo</a>
   <!-- Animated canvas background -->
   <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
@@ -51,9 +54,9 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <!-- HERO -->
-    <section id="hero" class="hero">
+    <section id="hero" class="hero" aria-labelledby="hero-h">
       <div class="hero__inner">
         <div class="terminal" role="img" aria-label="Terminal window">
           <div class="terminal__bar">
@@ -73,9 +76,9 @@
           </div>
         </div>
 
-        <h1 class="hero__title">Mateus de Pasquali</h1>
+        <h1 class="hero__title" id="hero-h">Mateus de Pasquali</h1>
         <p class="hero__subtitle" data-i18n="hero.subtitle">
-          Transformo dados em decisão — de pipelines de ETL a modelos preditivos.
+          Transformo dados em decisão: de pipelines de ETL a modelos preditivos.
         </p>
 
         <div class="hero__cta">
@@ -94,10 +97,10 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section">
+    <section id="about" class="section" aria-labelledby="about-h">
       <div class="section__head">
-        <span class="section__index">01</span>
-        <h2 class="section__title"><span class="section__hash">#</span> <span data-i18n="about.title">Sobre mim</span></h2>
+        <span class="section__index">~/about</span>
+        <h2 class="section__title" id="about-h"><span class="section__hash">#</span> <span data-i18n="about.title">Sobre mim</span></h2>
       </div>
       <div class="about">
         <div class="about__text">
@@ -131,10 +134,10 @@
     </section>
 
     <!-- SKILLS -->
-    <section id="skills" class="section">
+    <section id="skills" class="section" aria-labelledby="skills-h">
       <div class="section__head">
-        <span class="section__index">02</span>
-        <h2 class="section__title"><span class="section__hash">#</span> <span data-i18n="skills.title">Stack &amp; Skills</span></h2>
+        <span class="section__index">~/skills</span>
+        <h2 class="section__title" id="skills-h"><span class="section__hash">#</span> <span data-i18n="skills.title">Stack &amp; Skills</span></h2>
       </div>
       <div class="skills">
         <div class="skill-group">
@@ -167,10 +170,10 @@
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="section">
+    <section id="projects" class="section" aria-labelledby="projects-h">
       <div class="section__head">
-        <span class="section__index">03</span>
-        <h2 class="section__title"><span class="section__hash">#</span> <span data-i18n="projects.title">Projetos em destaque</span></h2>
+        <span class="section__index">~/projects</span>
+        <h2 class="section__title" id="projects-h"><span class="section__hash">#</span> <span data-i18n="projects.title">Projetos em destaque</span></h2>
       </div>
       <div class="projects" id="projects-grid"><!-- injected by JS --></div>
       <div class="projects__more">
@@ -179,10 +182,10 @@
     </section>
 
     <!-- EDUCATION -->
-    <section id="education" class="section">
+    <section id="education" class="section" aria-labelledby="education-h">
       <div class="section__head">
-        <span class="section__index">04</span>
-        <h2 class="section__title"><span class="section__hash">#</span> <span data-i18n="education.title">Formação acadêmica</span></h2>
+        <span class="section__index">~/education</span>
+        <h2 class="section__title" id="education-h"><span class="section__hash">#</span> <span data-i18n="education.title">Formação acadêmica</span></h2>
       </div>
       <ol class="timeline">
         <li class="timeline__item">
@@ -210,23 +213,23 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section section--contact">
+    <section id="contact" class="section section--contact" aria-labelledby="contact-h">
       <div class="section__head">
-        <span class="section__index">05</span>
-        <h2 class="section__title"><span class="section__hash">#</span> <span data-i18n="contact.title">Vamos conversar</span></h2>
+        <span class="section__index">~/contact</span>
+        <h2 class="section__title" id="contact-h"><span class="section__hash">#</span> <span data-i18n="contact.title">Vamos conversar</span></h2>
       </div>
       <p class="contact__lead" data-i18n="contact.lead">
         Aberto a oportunidades, colaborações e trocas sobre dados. Me chame:
       </p>
       <div class="contact__links">
         <a href="mailto:matpasqsi@gmail.com" class="contact__link">
-          <span class="contact__icon">✉</span> matpasqsi@gmail.com
+          <span class="contact__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7L22 6"/></svg></span> matpasqsi@gmail.com
         </a>
         <a href="https://github.com/MatPasquali" target="_blank" rel="noopener" class="contact__link">
-          <span class="contact__icon">⌥</span> github.com/MatPasquali
+          <span class="contact__icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.05-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22 0 1.61-.01 2.9-.01 3.29 0 .32.22.7.83.58C20.56 22.29 24 17.79 24 12.5 24 5.87 18.63.5 12 .5Z"/></svg></span> github.com/MatPasquali
         </a>
         <a href="https://www.linkedin.com/in/mateuspasquali/" target="_blank" rel="noopener" class="contact__link">
-          <span class="contact__icon">in</span> linkedin.com/in/mateuspasquali
+          <span class="contact__icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></span> linkedin.com/in/mateuspasquali
         </a>
         <a href="assets/cv/Mateus-de-Pasquali-CV.pdf" download class="contact__link">
           <span class="contact__icon">↓</span> <span data-i18n="contact.cv">Baixar currículo (PDF)</span>

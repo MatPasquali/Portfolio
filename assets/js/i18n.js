@@ -5,7 +5,9 @@
 
 const I18N = {
   pt: {
-    "meta.description": "Portfólio de Mateus de Pasquali — Cientista de Dados e Mestrando em Computação Aplicada. ETL, pricing, machine learning e engenharia de dados.",
+    "meta.description": "Portfólio de Mateus de Pasquali · Cientista de Dados e Mestrando em Computação Aplicada. ETL, pricing, machine learning e engenharia de dados.",
+
+    "a11y.skip": "Pular para o conteúdo",
 
     "nav.about": "Sobre",
     "nav.skills": "Skills",
@@ -15,7 +17,7 @@ const I18N = {
 
     "hero.role": "Cientista de Dados & Mestrando em Computação Aplicada",
     "hero.cmd": "./carreira.sh --resumo",
-    "hero.subtitle": "Transformo dados em decisão — de pipelines de ETL a modelos preditivos.",
+    "hero.subtitle": "Transformo dados em decisão: de pipelines de ETL a modelos preditivos.",
     "hero.ctaProjects": "Ver projetos",
     "hero.ctaCV": "↓ Baixar CV",
     "hero.ctaContact": "Entrar em contato",
@@ -60,7 +62,9 @@ const I18N = {
   },
 
   en: {
-    "meta.description": "Portfolio of Mateus de Pasquali — Data Scientist and Applied Computing master's student. ETL, pricing, machine learning and data engineering.",
+    "meta.description": "Portfolio of Mateus de Pasquali · Data Scientist and Applied Computing master's student. ETL, pricing, machine learning and data engineering.",
+
+    "a11y.skip": "Skip to content",
 
     "nav.about": "About",
     "nav.skills": "Skills",
@@ -70,7 +74,7 @@ const I18N = {
 
     "hero.role": "Data Scientist & Applied Computing Master's Student",
     "hero.cmd": "./career.sh --summary",
-    "hero.subtitle": "I turn data into decisions — from ETL pipelines to predictive models.",
+    "hero.subtitle": "I turn data into decisions: from ETL pipelines to predictive models.",
     "hero.ctaProjects": "View projects",
     "hero.ctaCV": "↓ Download CV",
     "hero.ctaContact": "Get in touch",
@@ -121,7 +125,7 @@ const PROJECTS = {
     { title: "PIPELINE_CNEFE_IBGE", lang: "Python", desc: "Pipeline replicável de ETL para obter renda por setor censitário a partir do CEP, usando dados do CNEFE/IBGE.", tags: ["ETL", "IBGE", "Geocoding"], url: "https://github.com/MatPasquali/PIPELINE_CNEFE_IBGE" },
     { title: "ETL_IBGE_GEOFENCING_CEP", lang: "Jupyter", desc: "Geofencing por CEP: cruzamento espacial de regiões com dados do IBGE para enriquecer bases por localização.", tags: ["Geofencing", "ETL", "GIS"], url: "https://github.com/MatPasquali/ETL_IBGE_GEOFENCING_CEP" },
     { title: "Study_BRASIL_2050", lang: "Python", desc: "Projeto baseado no TCC do MBA (USP/ESALQ): análise e projeções socioeconômicas para o Brasil em 2050.", tags: ["DataScience", "Forecasting", "USP"], url: "https://github.com/MatPasquali/Study_BRASIL_2050" },
-    { title: "jarvis_ai_agent", lang: "Python", desc: "Agente de IA experimental em Python — automação de tarefas e integração com modelos de linguagem.", tags: ["AI", "Agents", "LLM"], url: "https://github.com/MatPasquali/jarvis_ai_agent" },
+    { title: "jarvis_ai_agent", lang: "Python", desc: "Agente de IA experimental em Python: automação de tarefas e integração com modelos de linguagem.", tags: ["AI", "Agents", "LLM"], url: "https://github.com/MatPasquali/jarvis_ai_agent" },
     { title: "Projeto2_ArvoresBinariaAVL", lang: "Jupyter", desc: "Estudo comparativo de árvores binárias de busca e AVL usando dados reais do IBGE. Mestrado Mackenzie.", tags: ["Algoritmos", "AVL", "Mackenzie"], url: "https://github.com/MatPasquali/Projeto2_ArvoresBinariaAVL" },
     { title: "Benchmark de Ordenação", lang: "Jupyter", desc: "Análise de algoritmos clássicos de ordenação com foco em tempos de execução e comportamento assintótico.", tags: ["Algoritmos", "Benchmark", "Big-O"], url: "https://github.com/MatPasquali/Projeto-1---Benchmark-de-Algoritmos-de-Ordena-o" }
   ],
@@ -129,7 +133,7 @@ const PROJECTS = {
     { title: "PIPELINE_CNEFE_IBGE", lang: "Python", desc: "Replicable ETL pipeline to derive income by census sector from postal codes, using CNEFE/IBGE data.", tags: ["ETL", "IBGE", "Geocoding"], url: "https://github.com/MatPasquali/PIPELINE_CNEFE_IBGE" },
     { title: "ETL_IBGE_GEOFENCING_CEP", lang: "Jupyter", desc: "Postal-code geofencing: spatial join of regions with IBGE data to enrich datasets by location.", tags: ["Geofencing", "ETL", "GIS"], url: "https://github.com/MatPasquali/ETL_IBGE_GEOFENCING_CEP" },
     { title: "Study_BRASIL_2050", lang: "Python", desc: "Project based on the MBA thesis (USP/ESALQ): socioeconomic analysis and projections for Brazil in 2050.", tags: ["DataScience", "Forecasting", "USP"], url: "https://github.com/MatPasquali/Study_BRASIL_2050" },
-    { title: "jarvis_ai_agent", lang: "Python", desc: "Experimental Python AI agent — task automation and integration with language models.", tags: ["AI", "Agents", "LLM"], url: "https://github.com/MatPasquali/jarvis_ai_agent" },
+    { title: "jarvis_ai_agent", lang: "Python", desc: "Experimental Python AI agent: task automation and integration with language models.", tags: ["AI", "Agents", "LLM"], url: "https://github.com/MatPasquali/jarvis_ai_agent" },
     { title: "Projeto2_ArvoresBinariaAVL", lang: "Jupyter", desc: "Comparative study of binary search trees and AVL trees using real IBGE data. Mackenzie master's.", tags: ["Algorithms", "AVL", "Mackenzie"], url: "https://github.com/MatPasquali/Projeto2_ArvoresBinariaAVL" },
     { title: "Sorting Benchmark", lang: "Jupyter", desc: "Analysis of classic sorting algorithms focusing on execution times and asymptotic behavior.", tags: ["Algorithms", "Benchmark", "Big-O"], url: "https://github.com/MatPasquali/Projeto-1---Benchmark-de-Algoritmos-de-Ordena-o" }
   ]
