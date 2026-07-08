@@ -22,8 +22,22 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/css/style.css" />
-  <!-- Mark JS as available before first paint (reveal animations are JS-gated) -->
-  <script>document.documentElement.classList.add('js');</script>
+  <!-- Mark JS as available + apply saved accessibility prefs before first paint -->
+  <script>
+    (function () {
+      var el = document.documentElement;
+      el.classList.add('js');
+      try {
+        var a = JSON.parse(localStorage.getItem('mp-a11y') || '{}');
+        if (a.text)     el.classList.add('a11y-text-' + a.text);
+        if (a.contrast) el.classList.add('a11y-contrast');
+        if (a.motion)   el.classList.add('a11y-motion');
+        if (a.gray)     el.classList.add('a11y-gray');
+        if (a.dys)      el.classList.add('a11y-dys');
+        if (a.space)    el.classList.add('a11y-space');
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
   <a href="#main" class="skip-link" data-i18n="a11y.skip">Pular para o conteúdo</a>
@@ -37,12 +51,21 @@
     </a>
     <nav class="nav__links" aria-label="Primary">
       <a href="#about"    data-i18n="nav.about">Sobre</a>
+      <a href="#experience" data-i18n="nav.experience">Experiência</a>
       <a href="#skills"   data-i18n="nav.skills">Skills</a>
       <a href="#projects" data-i18n="nav.projects">Projetos</a>
       <a href="#education"data-i18n="nav.education">Formação</a>
       <a href="#contact"  data-i18n="nav.contact">Contato</a>
     </nav>
     <div class="nav__actions">
+      <button id="a11y-toggle" class="a11y-toggle" aria-label="Acessibilidade" data-i18n-aria="a11y.open"
+              aria-haspopup="dialog" aria-controls="a11y-panel" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/>
+          <circle cx="12" cy="7" r="1.1" fill="currentColor" stroke="none"/>
+          <path d="M12 9v4.5m0 0-2.4 3.8m2.4-3.8 2.4 3.8M7.8 10.4 12 11l4.2-.6"/>
+        </svg>
+      </button>
       <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">
         <span class="lang-toggle__pt is-active">PT</span>
         <span class="lang-toggle__sep">/</span>
@@ -125,12 +148,55 @@
           </p>
         </div>
         <aside class="about__card">
+          <div class="about__profile">
+            <img class="avatar" src="assets/img/mateus.jpg" width="128" height="128"
+                 alt="Foto de Mateus de Pasquali" data-i18n-alt="avatar.alt" loading="lazy" />
+            <p class="about__name">Mateus de Pasquali</p>
+            <a class="about__handle" href="https://github.com/MatPasquali" target="_blank" rel="noopener">@MatPasquali</a>
+          </div>
           <div class="about__card-row"><span class="key">location</span><span class="val">São Paulo, BR</span></div>
           <div class="about__card-row"><span class="key">company</span><span class="val">Zurich Insurance</span></div>
           <div class="about__card-row"><span class="key">focus</span><span class="val" data-i18n="about.focus">Data Science · ETL · ML</span></div>
           <div class="about__card-row"><span class="key">status</span><span class="val status-open" data-i18n="about.statusVal">aberto a colaborações</span></div>
         </aside>
       </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section" aria-labelledby="experience-h">
+      <div class="section__head">
+        <span class="section__index">~/experience</span>
+        <h2 class="section__title" id="experience-h"><span class="section__hash">#</span> <span data-i18n="experience.title">Experiência profissional</span></h2>
+      </div>
+      <ol class="timeline">
+        <li class="timeline__item">
+          <span class="timeline__dot"></span>
+          <span class="timeline__period">2024 — <span data-i18n="experience.now">presente</span></span>
+          <h3 class="timeline__role" data-i18n="experience.role1">Analista de Pricing I</h3>
+          <p class="timeline__org">Zurich Insurance</p>
+          <p class="timeline__desc timeline__desc--justify" data-i18n="experience.desc1">
+            Crio e mantenho relatórios e análises de KPIs com SAS, Databricks e Python, gerando
+            eficiência e inteligência operacional para a área de pricing, além de atuar com as
+            ferramentas de precificação da WTW (Radar e Emblem). Liderei o projeto de atualização e
+            montagem da base do Censo demográfico do IBGE no Data Lake, usada para modelagem de risco:
+            automatizei a extração pela API SIDRA, desenvolvi bots de geolocalização que mapeiam as
+            rodoviárias de todos os municípios do Brasil (latitude, longitude e distância cartesiana)
+            e integrei dados de frota do SENATRAN.
+          </p>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__dot"></span>
+          <span class="timeline__period">2022 — 2023</span>
+          <h3 class="timeline__role" data-i18n="experience.role2">Estágiário</h3>
+          <p class="timeline__org">Zurich Insurance</p>
+          <p class="timeline__desc timeline__desc--justify" data-i18n="experience.desc2">
+            Desenvolvi dashboards de acompanhamento de KPIs no Power BI e automatizei extrações de
+            bases via web scraping em Python, além de analisar dados com bibliotecas do ecossistema
+            Python e manipular grandes volumes com SQL e SAS no SAS Enterprise Guide, reduzindo
+            tarefas manuais e dando escala às entregas.
+          </p>
+        </li>
+      </ol>
     </section>
 
     <!-- SKILLS -->
@@ -244,6 +310,74 @@
       "© <span id="year"></span> Mateus de Pasquali"
     </p>
   </footer>
+
+  <!-- Accessibility panel -->
+  <div class="a11y-backdrop" id="a11y-backdrop"></div>
+  <aside class="a11y" id="a11y-panel" role="dialog" aria-modal="true" aria-labelledby="a11y-title" aria-hidden="true">
+    <div class="a11y__head">
+      <h2 class="a11y__title" id="a11y-title" data-i18n="a11y.title">Acessibilidade</h2>
+      <button class="a11y__close" id="a11y-close" aria-label="Fechar" data-i18n-aria="a11y.close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <p class="a11y__intro" data-i18n="a11y.intro">Ajuste a leitura do jeito que ficar melhor para você. Suas escolhas ficam salvas neste aparelho.</p>
+
+    <div class="a11y__group">
+      <span class="a11y__label" data-i18n="a11y.textSize">Tamanho do texto</span>
+      <div class="a11y__seg" role="group" aria-label="Tamanho do texto" data-i18n-aria="a11y.textSize">
+        <button type="button" class="a11y__seg-btn" data-a11y-text="0" aria-pressed="true">A</button>
+        <button type="button" class="a11y__seg-btn" data-a11y-text="1" aria-pressed="false">A+</button>
+        <button type="button" class="a11y__seg-btn" data-a11y-text="2" aria-pressed="false">A++</button>
+      </div>
+    </div>
+
+    <div class="a11y__group">
+      <span class="a11y__label" data-i18n="a11y.contrast">Cor e contraste</span>
+      <div class="a11y__seg" role="group" aria-label="Cor e contraste" data-i18n-aria="a11y.contrast">
+        <button type="button" class="a11y__seg-btn" data-a11y-contrast="0" aria-pressed="true" data-i18n="a11y.contrastDefault">Padrão</button>
+        <button type="button" class="a11y__seg-btn" data-a11y-contrast="1" aria-pressed="false" data-i18n="a11y.contrastHigh">Alto contraste</button>
+      </div>
+    </div>
+
+    <div class="a11y__switches">
+      <label class="a11y__switch">
+        <input type="checkbox" class="a11y__switch-input" data-a11y-toggle="motion" />
+        <span class="a11y__switch-track" aria-hidden="true"><span class="a11y__switch-thumb"></span></span>
+        <span class="a11y__switch-text">
+          <span class="a11y__switch-name" data-i18n="a11y.motion">Reduzir animações</span>
+          <span class="a11y__switch-desc" data-i18n="a11y.motionDesc">Menos movimento na tela. Ajuda quem sente enjoo, tem epilepsia ou TDAH.</span>
+        </span>
+      </label>
+      <label class="a11y__switch">
+        <input type="checkbox" class="a11y__switch-input" data-a11y-toggle="gray" />
+        <span class="a11y__switch-track" aria-hidden="true"><span class="a11y__switch-thumb"></span></span>
+        <span class="a11y__switch-text">
+          <span class="a11y__switch-name" data-i18n="a11y.gray">Tons de cinza</span>
+          <span class="a11y__switch-desc" data-i18n="a11y.grayDesc">Tira as cores da página. Útil para reduzir estímulo visual.</span>
+        </span>
+      </label>
+      <label class="a11y__switch">
+        <input type="checkbox" class="a11y__switch-input" data-a11y-toggle="dys" />
+        <span class="a11y__switch-track" aria-hidden="true"><span class="a11y__switch-thumb"></span></span>
+        <span class="a11y__switch-text">
+          <span class="a11y__switch-name" data-i18n="a11y.dys">Fonte para dislexia</span>
+          <span class="a11y__switch-desc" data-i18n="a11y.dysDesc">Troca por uma letra mais fácil de distinguir na leitura.</span>
+        </span>
+      </label>
+      <label class="a11y__switch">
+        <input type="checkbox" class="a11y__switch-input" data-a11y-toggle="space" />
+        <span class="a11y__switch-track" aria-hidden="true"><span class="a11y__switch-thumb"></span></span>
+        <span class="a11y__switch-text">
+          <span class="a11y__switch-name" data-i18n="a11y.space">Mais espaçamento</span>
+          <span class="a11y__switch-desc" data-i18n="a11y.spaceDesc">Afasta letras e palavras para facilitar a leitura.</span>
+        </span>
+      </label>
+    </div>
+
+    <button type="button" class="a11y__reset" id="a11y-reset" data-i18n="a11y.reset">Restaurar padrões</button>
+
+    <p class="a11y__note" data-i18n="a11y.note">A acessibilidade também faz parte do próprio site: HTML semântico, foco visível, alvos grandes e navegação por teclado, seguindo as diretrizes WCAG 2.2 AA.</p>
+  </aside>
 
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>

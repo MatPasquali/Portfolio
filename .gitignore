@@ -1,0 +1,9 @@
+# Stray source files kept locally but not part of the site
+/EU.jpeg
+/Curriculo_*.pdf
+
+# OS / editor cruft
+Thumbs.db
+.DS_Store
+*.swp
+.vscode/

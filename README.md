@@ -5,6 +5,7 @@
   <img src="https://img.shields.io/badge/Stack-HTML%20%2B%20CSS%20%2B%20JS-1f6feb?style=for-the-badge" alt="Stack" />
   <img src="https://img.shields.io/badge/i18n-PT%20%2F%20EN-a78bfa?style=for-the-badge" alt="Bilingual" />
   <img src="https://img.shields.io/badge/Theme-Dark%20Terminal-0a0e14?style=for-the-badge" alt="Theme" />
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-3ad35a?style=for-the-badge" alt="License: MIT" /></a>
 </p>
 
 Site de portfólio estático (HTML + CSS + JS puro), bilíngue (PT/EN), com estética *dark tech / terminal*.

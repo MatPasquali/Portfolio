@@ -21,6 +21,16 @@
       else el.textContent = val;
     });
 
+    // translate aria-labels and alt text
+    document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
+      const val = I18N[next][el.getAttribute("data-i18n-aria")];
+      if (val !== undefined) el.setAttribute("aria-label", val);
+    });
+    document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
+      const val = I18N[next][el.getAttribute("data-i18n-alt")];
+      if (val !== undefined) el.setAttribute("alt", val);
+    });
+
     // toggle button state
     document.querySelector(".lang-toggle__pt").classList.toggle("is-active", next === "pt");
     document.querySelector(".lang-toggle__en").classList.toggle("is-active", next === "en");
@@ -191,6 +201,84 @@
     draw();
   }
 
+  /* ---------- Accessibility panel ---------- */
+  const A11Y_KEY = "mp-a11y";
+  function initA11y() {
+    const root = document.documentElement;
+    const toggle = document.getElementById("a11y-toggle");
+    const panel = document.getElementById("a11y-panel");
+    const backdrop = document.getElementById("a11y-backdrop");
+    const closeBtn = document.getElementById("a11y-close");
+    const resetBtn = document.getElementById("a11y-reset");
+    if (!toggle || !panel) return;
+
+    let settings = {};
+    try { settings = JSON.parse(localStorage.getItem(A11Y_KEY) || "{}"); } catch (e) { settings = {}; }
+    const save = () => localStorage.setItem(A11Y_KEY, JSON.stringify(settings));
+
+    function syncControls() {
+      panel.querySelectorAll("[data-a11y-text]").forEach((b) =>
+        b.setAttribute("aria-pressed", String((settings.text || 0) === +b.dataset.a11yText)));
+      panel.querySelectorAll("[data-a11y-contrast]").forEach((b) =>
+        b.setAttribute("aria-pressed", String((settings.contrast ? 1 : 0) === +b.dataset.a11yContrast)));
+      panel.querySelectorAll("[data-a11y-toggle]").forEach((c) => { c.checked = !!settings[c.dataset.a11yToggle]; });
+    }
+
+    function apply() {
+      root.classList.remove("a11y-text-1", "a11y-text-2");
+      if (settings.text) root.classList.add("a11y-text-" + settings.text);
+      root.classList.toggle("a11y-contrast", !!settings.contrast);
+      root.classList.toggle("a11y-motion", !!settings.motion);
+      root.classList.toggle("a11y-gray", !!settings.gray);
+      root.classList.toggle("a11y-dys", !!settings.dys);
+      root.classList.toggle("a11y-space", !!settings.space);
+      syncControls();
+    }
+
+    panel.querySelectorAll("[data-a11y-text]").forEach((b) =>
+      b.addEventListener("click", () => { settings.text = +b.dataset.a11yText || 0; save(); apply(); }));
+    panel.querySelectorAll("[data-a11y-contrast]").forEach((b) =>
+      b.addEventListener("click", () => { settings.contrast = +b.dataset.a11yContrast === 1; save(); apply(); }));
+    panel.querySelectorAll("[data-a11y-toggle]").forEach((c) =>
+      c.addEventListener("change", () => { settings[c.dataset.a11yToggle] = c.checked; save(); apply(); }));
+    resetBtn.addEventListener("click", () => { settings = {}; save(); apply(); });
+
+    let lastFocus = null;
+    function onKeydown(e) {
+      if (e.key === "Escape") { closePanel(); return; }
+      if (e.key !== "Tab") return;
+      const f = panel.querySelectorAll('button, [href], input, [tabindex]:not([tabindex="-1"])');
+      if (!f.length) return;
+      const first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+    function openPanel() {
+      lastFocus = document.activeElement;
+      panel.classList.add("is-open");
+      backdrop.classList.add("is-open");
+      panel.setAttribute("aria-hidden", "false");
+      toggle.setAttribute("aria-expanded", "true");
+      document.body.classList.add("no-scroll");
+      closeBtn.focus();
+      document.addEventListener("keydown", onKeydown);
+    }
+    function closePanel() {
+      panel.classList.remove("is-open");
+      backdrop.classList.remove("is-open");
+      panel.setAttribute("aria-hidden", "true");
+      toggle.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("no-scroll");
+      document.removeEventListener("keydown", onKeydown);
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+    toggle.addEventListener("click", () => (panel.classList.contains("is-open") ? closePanel() : openPanel()));
+    closeBtn.addEventListener("click", closePanel);
+    backdrop.addEventListener("click", closePanel);
+
+    apply(); // re-apply saved settings + sync controls
+  }
+
   /* ---------- Boot ---------- */
   document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("year").textContent = new Date().getFullYear();
@@ -198,5 +286,6 @@
     initReveal();
     document.querySelectorAll(".stat__num").forEach((el) => countObserver.observe(el));
     initCanvas();
+    initA11y();
   });
 })();
